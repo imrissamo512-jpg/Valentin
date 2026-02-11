@@ -2,6 +2,10 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const buttonsArea = document.querySelector(".buttons");
 
+noBtn.style.left = "60%";
+noBtn.style.top = "50%";
+noBtn.style.transform = "translate(-50%, -50%)";
+
 function moveNoButton() {
     const areaWidth = buttonsArea.clientWidth;
     const areaHeight = buttonsArea.clientHeight;
@@ -17,6 +21,7 @@ function moveNoButton() {
 
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
+    noBtn.style.transform = "none";
 }
 
 // PC – myš
@@ -30,5 +35,11 @@ noBtn.addEventListener("touchstart", (e) => {
 
 // Áno
 yesBtn.addEventListener("click", () => {
-    document.querySelector("h1").innerText = "Yay! 💖🥰";
+    document.querySelector("h1").innerText = "Vedel som že povieš ÁNO!! 💖🥰";
+
+    // odstráni tlačidlo "Nie"
+    noBtn.style.display = "none";
+
+    // môžeš aj zmeniť text tlačidla Áno
+    yesBtn.innerText = "Milujem ťa ❤️";
 });
