@@ -31,12 +31,13 @@ body {
 
 
 .teddy {
-    width: 180px;
-    margin-bottom: 20px;
+    width: 120px;
+    margin-bottom: 10px;
+    transform: rotate(-90deg);
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #ff4d6d;
 }
 
@@ -85,5 +86,6 @@ button {
     align-items: center;
     position: relative;
 }
+
 
 
